@@ -1,0 +1,16 @@
+#coding=utf-8
+'''
+下面说说Python3x中的urllib包、http包以及其他比较好使的第三方包
+1、Python3 urllib、http
+Python3不像2x中酷虎的和服务器模块结构散乱，Python3中把这些打包成为了2个包，就是http与urllib，详解如下：
+http会处理所有客户端--服务器http请求的具体细节，其中：
+（1）client会处理客户端的部分
+（2）server会协助你编写Python web服务器程序
+（3）cookies和cookiejar会处理cookie，cookie可以在请求中存储数据
+使用cookiejar示例可以在前几篇博客中基于Python3的爬虫中找到示例，如下：
+'''
+
+# 示例
+import http.cookiejar
+import urllib.request
+import urllib.
