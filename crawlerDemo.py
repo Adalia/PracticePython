@@ -49,3 +49,4 @@ while queue:
 
 
 
+#参考文章：http://python.jobbole.com/77825/
