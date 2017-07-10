@@ -44,7 +44,7 @@ while queue:
     for x in linkre.findall(data):
         if 'http' in x and x not in visited:
             queue.append(x)
-            print('Insert into queue  '  + x)
+            print('Insert into queue  '+ x)
 
 
 
