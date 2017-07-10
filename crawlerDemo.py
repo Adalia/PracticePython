@@ -8,7 +8,7 @@ import dealFile
 queue = deque()
 visited = set()
 
-url = 'http://python.jobbole.com/77825/'
+url = 'http://news.dbanotes.net'
 
 queue.append(url)
 cnt = 0
@@ -21,13 +21,19 @@ while queue:
     print('已经抓取：'+str(cnt)+'   正在抓取 <--' +url+ ' -->')
     cnt += 1
     oper = makeOpenner.makeMyOpener()
-    uop = oper.open('http://www.baidu.com/', timeout=1000)
+    try:
+        uop = oper.open(url, timeout=1000)
+        print(url)
+    except:
+        continue
+    print(uop.getheader('Content-Type'))
 
     if 'html' not in uop.getheader('Content-Type'):
         continue
 
     try:
         data = uop.read().decode('utf-8')
+        print(data)
         dealFile.saveFile(data)
     except:
         continue
