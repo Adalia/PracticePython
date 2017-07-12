@@ -4,11 +4,14 @@ import re
 from collections import deque
 import makeOpenner
 import dealFile
+import gzip
+
 
 queue = deque()
 visited = set()
 
-url = 'http://news.dbanotes.net'
+url = 'https://www.zhihu.com'
+
 
 queue.append(url)
 cnt = 0
